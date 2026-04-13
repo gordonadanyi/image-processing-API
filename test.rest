@@ -1,0 +1,92 @@
+POST http://localhost:8000/api/auth/signup
+Content-Type: application/json
+
+{
+    "username": "baba yaga",
+    "email": "babayaga@gmail.com",
+    "password": "Password@123"
+}
+
+###
+
+POST http://localhost:8000/api/auth/login
+Content-Type: application/json  
+
+{
+    "email": "babayaga@gmail.com",
+    "password":"Password@123"
+}   
+
+
+###
+GET http://localhost:8000/api/auth/me    
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDdiMzI4MTRlM2Y1ZjAzMDI2ZjZmNyIsImlhdCI6MTc3NjExNDIyOSwiZXhwIjoxNzc2MTE1MTI5fQ.Wd8giaVMiMldsL9M-et4BuuU0WT2RXXUOGkEP6QTzUM
+
+
+###
+POST http://localhost:8000/api/auth/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDdiMzI4MTRlM2Y1ZjAzMDI2ZjZmNyIsImlhdCI6MTc3NTgxNTE1OSwiZXhwIjoxNzc2NDE5OTU5fQ.XakXrON3YWGNKaaajWhI2w6f4kqAt0UN0YD_2SawmbY"
+ 
+}
+
+###
+POST http://localhost:8000/api/auth/logout
+Content-Type: application/json  
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDdiMzI4MTRlM2Y1ZjAzMDI2ZjZmNyIsImlhdCI6MTc3NTc0NzczNSwiZXhwIjoxNzc2MzUyNTM1fQ.1cAxsb4J2_oUNL_HmbXBbP6AQHRLd4O1utz4swCbA2g"
+}
+
+###
+GET http://localhost:8000/api/images
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDdiMzI4MTRlM2Y1ZjAzMDI2ZjZmNyIsImlhdCI6MTc3NjA5NTE4NywiZXhwIjoxNzc2MDk2MDg3fQ.C7JyqVIGFruUziWoGvWLAeuz3X6jt5gbi7C5sEmoDVg
+
+
+
+
+###
+GET http://localhost:8000/api/images/69d8d5237c95221586f9cc1d
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDdiMzI4MTRlM2Y1ZjAzMDI2ZjZmNyIsImlhdCI6MTc3NjAyMjg5NSwiZXhwIjoxNzc2MDIzNzk1fQ.u080n2s86QkQxP1TbJZVaH4h9PGkShFJwZHTImqk3RQ
+
+
+
+
+###
+DELETE http://localhost:8000/api/images/69d8b2a586b193fcb9b71e00
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDdiMzI4MTRlM2Y1ZjAzMDI2ZjZmNyIsImlhdCI6MTc3NjA5NTE4NywiZXhwIjoxNzc2MDk2MDg3fQ.C7JyqVIGFruUziWoGvWLAeuz3X6jt5gbi7C5sEmoDVg
+
+
+
+###
+GET http://localhost:8000/api/images/69d8d5237c95221586f9cc1d/transform?resize=800x600
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDdiMzI4MTRlM2Y1ZjAzMDI2ZjZmNyIsImlhdCI6MTc3NjAxNTQ1OCwiZXhwIjoxNzc2MDE2MzU4fQ.cBo47_fxkARO14j918TiDn5vBRnBzB-CtSvCAD7jZGk
+
+###
+GET http://localhost:8000/api/images/69d8d5237c95221586f9cc1d/transform?resize=600x400&grayscale=true
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDdiMzI4MTRlM2Y1ZjAzMDI2ZjZmNyIsImlhdCI6MTc3NjAxNjc0NiwiZXhwIjoxNzc2MDE3NjQ2fQ.dul-nJobsGW6O3bYhRYjsUdNFoHe61i-C7PQ5d6rRTE
+
+###
+GET http://localhost:8000/api/images/69d8f13db5acd3c343c9a6c1/transform?rotate=90&format=webp
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDdiMzI4MTRlM2Y1ZjAzMDI2ZjZmNyIsImlhdCI6MTc3NjAxNjc0NiwiZXhwIjoxNzc2MDE3NjQ2fQ.dul-nJobsGW6O3bYhRYjsUdNFoHe61i-C7PQ5d6rRTE
+
+###
+GET http://localhost:8000/api/images/69d8d5237c95221586f9cc1d/transform?crop=50,50,300,300&quality=70
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDdiMzI4MTRlM2Y1ZjAzMDI2ZjZmNyIsImlhdCI6MTc3NjAxNjc0NiwiZXhwIjoxNzc2MDE3NjQ2fQ.dul-nJobsGW6O3bYhRYjsUdNFoHe61i-C7PQ5d6rRTE
+
+
+###
+GET http://localhost:8000/api/images/69d8d5237c95221586f9cc1d/transform?flip=true&sepia=true
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDdiMzI4MTRlM2Y1ZjAzMDI2ZjZmNyIsImlhdCI6MTc3NjAxNjc0NiwiZXhwIjoxNzc2MDE3NjQ2fQ.dul-nJobsGW6O3bYhRYjsUdNFoHe61i-C7PQ5d6rRTE
+
+###
+GET http://localhost:8000/api/images/69d8d5237c95221586f9cc1d/transform?mirror=true
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDdiMzI4MTRlM2Y1ZjAzMDI2ZjZmNyIsImlhdCI6MTc3NjAxNjc0NiwiZXhwIjoxNzc2MDE3NjQ2fQ.dul-nJobsGW6O3bYhRYjsUdNFoHe61i-C7PQ5d6rRTE
+
+
+###
+GET http://localhost:8000/api/images/69d8d5277c95221586f9cc1e/transform?watermark=MyBrand&resize=800x600&opacity=0.5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDdiMzI4MTRlM2Y1ZjAzMDI2ZjZmNyIsImlhdCI6MTc3NjA5NTE4NywiZXhwIjoxNzc2MDk2MDg3fQ.C7JyqVIGFruUziWoGvWLAeuz3X6jt5gbi7C5sEmoDVg
